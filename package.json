@@ -1,0 +1,22 @@
+{
+  "name": "mvc-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "npm install; nodemon",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dog-ceo": "^1.0.1",
+    "express": "^4.17.1",
+    "body-parser": "1.19.0"
+  },
+  "devDependencies": {
+    "jest": "^25.2.4",
+    "nodemon": "^2.0.2"
+  }
+}
