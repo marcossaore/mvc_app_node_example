@@ -2,8 +2,20 @@ version: "3"
 services:
   web:
     container_name: my-docker-app
-    build: .
+    build: 
+      context : ./build/node
     ports:
     - "3000:3000"
     volumes:
     - .:/app:cached
+  db: 
+    container_name: db
+    build: 
+      context : ./build/mysql
+    command: --max_allowed_packet=32505856
+    restart: always
+    ports: 
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: exampledb
